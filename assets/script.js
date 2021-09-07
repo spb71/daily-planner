@@ -19,17 +19,17 @@ $(document).ready(function () {
         console.log(timeBlockHour);
         for (var i = textAreaEl[0]; i < textAreaEl.length; i++) {
             if (timeBlockHour < currentHour) {
-                textAreaEl.addClass("past");
-                textAreaEl.removeClass("future");
-                textAreaEl.removeClass("present");
+                textAreaEl[i].addClass("past");
+                textAreaEl[i].removeClass("future");
+                textAreaEl[i].removeClass("present");
             } else if (timeBlockHour === currentHour) {
-                textAreaEl.removeClass("past");
-                textAreaEl.removeClass("future");
-                textAreaEl.addClass("present");
+                textAreaEl[i].removeClass("past");
+                textAreaEl[i].removeClass("future");
+                textAreaEl[i].addClass("present");
             } else {
-                textAreaEl.removeClass("past");
-                textAreaEl.removeClass("present");
-                textAreaEl.addClass("future");
+                textAreaEl[i].removeClass("past");
+                textAreaEl[i].removeClass("present");
+                textAreaEl[i].addClass("future");
             }
         }
     });
